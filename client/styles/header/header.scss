@@ -1,0 +1,32 @@
+.header {
+  background-color: var(--secondary-color);
+  padding: 0 48px;
+}
+
+.nav__main__list {
+  height: 68px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__main__list-item:first-of-type {
+  margin-right: auto;
+}
+
+.nav__main__link {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 48px;
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px var(--accent-color);
+  }
+}
+
+.nav__main__logo {
+  width: 150px;
+}

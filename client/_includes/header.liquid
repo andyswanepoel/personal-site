@@ -1,0 +1,19 @@
+<header class="header">
+  <nav class="nav__main">
+    <ul class="nav__main__list">
+      {% for navLink in navLinks -%}
+        <li class="nav__main__list-item">
+          {%- if navLink.img %}
+            <a href="{{navLink.link}}" class="nav__main__logo">
+              <img src="{{navLink.img.src}}" alt="navLink.img.alt" class="nav__main__logo">
+            </a>
+          {% else %}
+            <a href="{{navLink.link}}" class="nav__main__link">
+              {{navLink.name}}
+            </a>
+          {% endif -%}
+        </li>
+      {% endfor -%}
+    </ul>
+  </nav>
+</header>

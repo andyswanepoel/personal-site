@@ -12,7 +12,15 @@
     "link": "#about-me"
   },
   {
-    "name": "Experience",
-    "link": "#experience"
+    "name": "Skills",
+    "link": "#skill"
+  },
+  {
+    "name": "Work",
+    "link": "#work"
+  },
+  {
+    "name": "Blog",
+    "link": "#blog"
   }
 ]

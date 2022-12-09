@@ -23,6 +23,8 @@ const readFiles = (dirPath = "") => {
 module.exports = eleventyConfig => {
   eleventyConfig.addShortcode("styles", () => readFiles());
   eleventyConfig.addPassthroughCopy({ "./client/img": "img" });
+  eleventyConfig.addWatchTarget("./client/styles/");
+  eleventyConfig.addWatchTarget("./client/scripts/");
   return {
     dir: {
       input: "client/pages",
