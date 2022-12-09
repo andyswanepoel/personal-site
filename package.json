@@ -1,0 +1,29 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "server/app.ts",
+  "scripts": {
+    "clean": "rm -rf ./client/dist",
+    "start:dev": "concurrently \"yarn clean\" \"yarn:build:*:dev\"",
+    "build:css:dev": "sass client/styles:client/dist/styles --watch",
+    "build:js:dev": "esbuild client/scripts/index.ts --bundle --sourcemap --watch --target=chrome58,firefox57,safari11,edge16 --outfile=client/dist/index.js",
+    "build:html:dev": "eleventy --serve --watch",
+    "build:css:prod": "sass --no-source-map client/styles:client/dist/styles",
+    "build:js:prod": "esbuild client/scripts/index.ts --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outfile=client/dist/index.js",
+    "build:html:prod": "eleventy",
+    "build:prod": "yarn clean && concurrently \"yarn:build:*:prod\""
+  },
+  "repository": "https://github.com/andyswanepoel/personal-site.git",
+  "author": "Andy Swanepoel <andyp.swanepoel@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@shopify/prettier-plugin-liquid": "^1.0.0-rc.1",
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.15.18",
+    "prettier": "^2.8.0",
+    "sass": "^1.56.2",
+    "ttab": "^0.7.3"
+  }
+}

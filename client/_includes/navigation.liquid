@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    {% for navLink in navLinks -%}
+      <li>
+        <a href="{{navLink.link}}">
+          {%- if navLink.img %}
+            <img src="{{navLink.img.src}}" alt="navLink.img.alt">
+          {% else %}
+            {{navLink.name}}
+          {% endif -%}
+        </a>
+      </li>
+    {% endfor -%}
+  </ul>
+</nav>

@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #9ec0bc;
+  --secondary-color: #2e4159;
+  --accent-color: #ff8811;
+  --white: #fff8f0;
+  --black: #2e2b2b;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: auto;
+}
