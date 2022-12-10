@@ -1,15 +1,15 @@
 <header class="header">
   <nav class="nav__main">
     <ul class="nav__main__list">
-      {% for navLink in navLinks -%}
+      {% for section in sections -%}
         <li class="nav__main__list-item">
-          {%- if navLink.img %}
-            <a href="{{navLink.link}}" class="nav__main__logo">
-              <img src="{{navLink.img.src}}" alt="navLink.img.alt" class="nav__main__logo">
+          {%- if section.img %}
+            <a href="{{section.link}}" class="nav__main__logo">
+              <img src="{{section.img.src}}" alt="section.img.alt" class="nav__main__logo">
             </a>
           {% else %}
-            <a href="{{navLink.link}}" class="nav__main__link">
-              {{navLink.name}}
+            <a href="{{section.link}}" class="nav__main__link">
+              {{section.name}}
             </a>
           {% endif -%}
         </li>
