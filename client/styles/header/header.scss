@@ -1,21 +1,111 @@
+@import "../global/mixins";
+
 .header {
   background-color: var(--secondary-color);
   padding: 0 48px;
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+.nav__main {
+  display: flex;
+  height: 68px;
+  align-items: center;
+  position: relative;
+}
+
+.nav__hamburger {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav__hamburger__icon {
+  display: none;
+  position: relative;
+  height: 4px;
+  width: 30px;
+  background-color: var(--white);
+  border: none;
+  transition: translate 1s ease, rotate 1s ease;
+  &::before,
+  &::after {
+    transition: translate 0.3s ease, rotate 0.3s ease;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    background-color: var(--white);
+    transform-origin: right;
+  }
+  &::before {
+    translate: -50% 200%;
+  }
+  &::after {
+    translate: -50% -200%;
+  }
+
+  .nav__hamburger__open & {
+    background: none;
+    &::before {
+      rotate: 45deg;
+      translate: -65% 250%;
+    }
+    &::after {
+      rotate: -45deg;
+      translate: -65% -280%;
+    }
+  }
+
+  @include mobile {
+    display: block;
+  }
 }
 
 .nav__main__list {
-  height: 68px;
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   align-items: center;
+  @include mobile {
+    width: 200px;
+    align-self: flex-start;
+    padding: 16px;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--secondary-color);
+    right: -16px;
+    top: 68px;
+    translate: 100% 0%;
+    transition: translate 0.5s ease, visibility 0s ease 0.5s;
+
+    visibility: hidden;
+    .nav__hamburger__open ~ & {
+      translate: 0% 0%;
+      visibility: visible;
+      transition: translate 0.5s ease, visibility 0s ease;
+    }
+  }
 }
 
-.nav__main__list-item:first-of-type {
+.nav__main__logo {
+  display: flex;
   margin-right: auto;
+  width: 150px;
+  @include mobile {
+    width: 120px;
+  }
 }
-
+.nav__main__list-item {
+  @include mobile {
+    margin: 12px auto;
+  }
+}
 .nav__main__link {
   color: var(--white);
   font-weight: bold;
@@ -25,8 +115,7 @@
   &:focus {
     box-shadow: 0 3px var(--accent-color);
   }
-}
-
-.nav__main__logo {
-  width: 150px;
+  @include mobile {
+    margin: 0;
+  }
 }

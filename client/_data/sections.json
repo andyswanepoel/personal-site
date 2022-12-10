@@ -2,6 +2,7 @@
   {
     "name": "Home",
     "link": "#home",
+    "type": "home",
     "img": {
       "src": "img/logo.svg",
       "alt": "My logo"
@@ -9,18 +10,22 @@
   },
   {
     "name": "About Me",
-    "link": "#about-me"
+    "link": "#about",
+    "type": "navigation"
   },
   {
     "name": "Skills",
-    "link": "#skill"
+    "link": "#skill",
+    "type": "navigation"
   },
   {
     "name": "Work",
-    "link": "#work"
+    "link": "#work",
+    "type": "navigation"
   },
   {
     "name": "Blog",
-    "link": "#blog"
+    "link": "#blog",
+    "type": "navigation"
   }
 ]

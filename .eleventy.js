@@ -9,10 +9,12 @@ const readFiles = (dirPath = "") => {
     .readdirSync(`${baseDirectory}/${dirPath}`)
     .map(file => {
       if (!fs.statSync(`${baseDirectory}/${dirPath}/${file}`).isDirectory()) {
-        return `<link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
-          ".scss",
-          ".css"
-        )}">`;
+        if (file[0] !== "_") {
+          return `<link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
+            ".scss",
+            ".css"
+          )}">`;
+        }
       } else {
         return readFiles(`${dirPath ? dirPath + "/" + file : "/" + file}`);
       }

@@ -1,18 +1,24 @@
 <header class="header">
   <nav class="nav__main">
+    {% for section in sections -%}
+      {%- if section.img  %}
+        <a href="{{section.link}}" class="nav__main__logo">
+          <img src="{{section.img.src}}" alt="section.img.alt" class="nav__main__logo">
+        </a>
+      {% endif -%}
+    {% endfor -%}
+    <button class="nav__hamburger" id="nav__hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span class="nav__hamburger__icon"></span>
+    </button>
     <ul class="nav__main__list">
       {% for section in sections -%}
-        <li class="nav__main__list-item">
-          {%- if section.img %}
-            <a href="{{section.link}}" class="nav__main__logo">
-              <img src="{{section.img.src}}" alt="section.img.alt" class="nav__main__logo">
-            </a>
-          {% else %}
+        {%- if section.img == undefined %}
+          <li class="nav__main__list-item">
             <a href="{{section.link}}" class="nav__main__link">
               {{section.name}}
             </a>
-          {% endif -%}
-        </li>
+          </li>
+        {% endif -%}
       {% endfor -%}
     </ul>
   </nav>

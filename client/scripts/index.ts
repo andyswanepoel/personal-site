@@ -1,3 +1,3 @@
-import greet from "./greet";
+import navigationListener from "./navigation-listener";
 
-greet("Hello, world");
+navigationListener();

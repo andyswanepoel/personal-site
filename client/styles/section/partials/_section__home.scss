@@ -1,0 +1,97 @@
+@import "../../global/mixins";
+
+.section__home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.terminal {
+  font-family: "Roboto Mono", monospace;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: var(--white);
+  padding: 24px;
+  padding-top: 40px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-right: 60px;
+  @include mobile {
+    margin-right: 0;
+    padding: 12px;
+    padding-top: 24px;
+  }
+}
+
+.terminal__buttons {
+  position: absolute;
+  background-color: #ff3d12;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  translate: 0 -18px;
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+  }
+  &::before {
+    background-color: var(--accent-color);
+    translate: 16px 0;
+  }
+  &::after {
+    background-color: #33ff12;
+    translate: 32px 0;
+  }
+}
+
+.terminal__inner {
+  padding: 40px 28px;
+  background-color: var(--black);
+  border-radius: 10px;
+}
+
+.terminal__text__container {
+  &:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+}
+
+.terminal__text {
+  color: var(--white);
+  margin: 0;
+  span {
+    color: var(--accent-color);
+  }
+}
+
+.terminal__text__command {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.terminal__text__response {
+  font-size: 22px;
+  @include tablet {
+    font-size: 20px;
+  }
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.image__main {
+  display: block;
+  width: 500px;
+  @include tablet {
+    width: 325px;
+  }
+  @include mobile {
+    order: -1;
+    margin-bottom: 24px;
+  }
+}

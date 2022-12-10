@@ -1,0 +1,8 @@
+@import "../../global/mixins";
+
+.section {
+  padding: 48px;
+  @include mobile {
+    padding: 16px;
+  }
+}
