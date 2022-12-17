@@ -42,11 +42,13 @@
   column-gap: 24px;
   display: flex;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .carousel__card {
   perspective: 1200px;
   outline: none;
+  scroll-snap-align: center;
   &:hover,
   &:focus {
     .carousel__card__inner {
