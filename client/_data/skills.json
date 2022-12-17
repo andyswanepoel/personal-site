@@ -1,0 +1,62 @@
+[
+  {
+    "title": "react",
+    "display": "React",
+    "level": "advanced",
+    "experience": "2+ years"
+  },
+  {
+    "title": "typescript",
+    "display": "Typescript",
+    "level": "intermediate",
+    "experience": "1+ years"
+  },
+  {
+    "title": "javascript",
+    "display": "Javascript",
+    "level": "advanced",
+    "experience": "5+ years"
+  },
+  {
+    "title": "react-query",
+    "display": "React Query",
+    "level": "intermediate",
+    "experience": "1+ years"
+  },
+  {
+    "title": "nextjs",
+    "display": "Next.JS",
+    "level": "intermediate",
+    "experience": "1+ years"
+  },
+  {
+    "title": "html",
+    "display": "HTML",
+    "level": "advanced",
+    "experience": "5+ years"
+  },
+  {
+    "title": "css",
+    "display": "CSS",
+    "level": "advanced",
+    "experience": "5+ years"
+  },
+  {
+    "title": "cypress",
+    "display": "Cypress",
+    "level": "intermediate",
+    "experience": "1+ years"
+  },
+  {
+    "title": "github",
+    "display": "GitHub",
+    "level": "intermediate",
+    "experience": "1+ years"
+  },
+  {
+    "title": "honeycomb",
+    "display": "Honeycomb",
+    "level": "intermediate",
+    "experience": "1+ years"
+  }
+]

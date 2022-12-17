@@ -1,8 +1,29 @@
 @import "../../global/mixins";
 
 .section {
+  position: relative;
   padding: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
   @include mobile {
     padding: 16px;
+  }
+}
+
+.headline__section {
+  font-size: 36px;
+  position: relative;
+  width: fit-content;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + 42px);
+    background-color: var(--black);
+    bottom: -5px;
+    left: 0;
+  }
+  @include tablet {
+    font-size: 28px;
   }
 }

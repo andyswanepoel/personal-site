@@ -1,0 +1,27 @@
+.section__about {
+  padding-left: 456px;
+  @include tablet {
+    padding-left: 376px;
+  }
+  @include mobile {
+    padding-left: 16px;
+  }
+}
+
+.img__about {
+  position: absolute;
+  width: 360px;
+  top: 50%;
+  left: 0;
+  translate: 48px -50%;
+  @include tablet {
+    width: 280px;
+  }
+  @include mobile {
+    position: relative;
+    top: 0;
+    left: 0;
+    translate: 0% 0%;
+    margin: 0 auto;
+  }
+}

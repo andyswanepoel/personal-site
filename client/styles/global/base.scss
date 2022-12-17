@@ -1,3 +1,5 @@
+@import "_mixins";
+
 :root {
   --primary-color: #9ec0bc;
   --secondary-color: #2e4159;
@@ -19,8 +21,32 @@ html {
 body {
   background-color: var(--primary-color);
   color: var(--black);
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  padding-top: 68px;
   font-family: "Source Sans Pro", sans-serif;
   overflow-x: hidden;
+  font-size: 20px;
+  @include tablet {
+    font-size: 18px;
+  }
+}
+
+.overlay__background {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(#2e2b2b, 0.8);
+  .overlay__active & {
+    display: block;
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
 }

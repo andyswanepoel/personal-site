@@ -11,10 +11,12 @@
     {% styles %}
   </head>
   <body>
-    {% include 'header.liquid' %}
+    {%- include 'header.liquid' -%}
     <main>
       {{content}}
     </main>
+    <div class="overlay__background"></div>
+
   </body>
   <script src="index.js"></script>
 </html>

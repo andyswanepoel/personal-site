@@ -24,6 +24,14 @@ const readFiles = (dirPath = "") => {
 
 module.exports = eleventyConfig => {
   eleventyConfig.addShortcode("styles", () => readFiles());
+  eleventyConfig.addFilter("titlecase", value =>
+    value
+      .split(" ")
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ")
+  );
+  eleventyConfig.addFilter("kebab", value => value.split(" ").join("-"));
+
   eleventyConfig.addPassthroughCopy({ "./client/img": "img" });
   eleventyConfig.addWatchTarget("./client/styles/");
   eleventyConfig.addWatchTarget("./client/scripts/");

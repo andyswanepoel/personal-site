@@ -1,3 +1,3 @@
-import navigationListener from "./navigation-listener";
+import * as listeners from "./listeners";
 
-navigationListener();
+Object.keys(listeners).forEach(listener => listeners[listener]());

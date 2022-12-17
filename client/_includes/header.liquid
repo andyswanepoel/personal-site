@@ -3,7 +3,7 @@
     {% for section in sections -%}
       {%- if section.img  %}
         <a href="{{section.link}}" class="nav__main__logo">
-          <img src="{{section.img.src}}" alt="section.img.alt" class="nav__main__logo">
+          <img class="img" src="{{section.img.src}}" alt="section.img.alt" class="nav__main__logo">
         </a>
       {% endif -%}
     {% endfor -%}
