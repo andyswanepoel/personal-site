@@ -2,7 +2,7 @@
 
 .section {
   position: relative;
-  padding: 48px;
+  padding: 32px 48px;
   max-width: 1440px;
   margin: 0 auto;
   @include mobile {
@@ -14,6 +14,7 @@
   font-size: 36px;
   position: relative;
   width: fit-content;
+  margin-top: 14px;
   &::after {
     content: "";
     position: absolute;

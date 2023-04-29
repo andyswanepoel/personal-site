@@ -1,0 +1,125 @@
+.grid__skills {
+  margin-top: 42px;
+  display: flex;
+  column-gap: 24px;
+  row-gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid__skills__circle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: scale 0.5s ease;
+  &:hover,
+  &:focus {
+    scale: 1.15;
+    outline: none;
+  }
+}
+
+.img__grid__skills__logo {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.grid__skill__container__inner {
+  padding: 44px 32px 18px;
+  column-gap: 24px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    top: -20px;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    top: 0px;
+    opacity: 1;
+  }
+}
+.grid__skill__card {
+  display: none;
+  opacity: 0;
+  margin: 36px auto 0px;
+  padding: 44px 32px 18px;
+  text-align: center;
+  position: relative;
+  height: 340px;
+  width: 235px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-color: var(--secondary-color);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.grid__skill__card__visible {
+  display: block;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.grid__skill__text {
+  color: var(--white);
+  font-weight: bold;
+  margin: 0;
+}
+
+.grid__skill__text:last-child {
+  font-size: 16px;
+}
+
+.grid__skill__card__title {
+  font-size: 28px;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% 6px;
+    height: 3px;
+    width: 85%;
+    background-color: var(--accent-color);
+  }
+}
+
+.grid__skill__level__container {
+  position: relative;
+  width: 150px;
+  margin: 24px auto 0px;
+}
+
+.grid__skill__level__text__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  .grid__skill__text:last-child {
+    font-size: 16px;
+  }
+}
+.img__grid__skill__level {
+  width: 100%;
+}

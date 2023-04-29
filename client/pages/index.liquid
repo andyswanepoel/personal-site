@@ -1,6 +1,7 @@
 ---
 layout: base.liquid
 ---
-{%include 'section__home.liquid' %}
-{%include 'section__about.liquid' %}
-{%include 'section__skills.liquid' %}
+{% for section in sections -%}
+  {% assign fileName = "section__" | append: section.link | remove: '#' %}
+  {% include fileName %}
+{% endfor %}

@@ -15,12 +15,12 @@
   },
   {
     "name": "Skills",
-    "link": "#skill",
+    "link": "#skills",
     "type": "navigation"
   },
   {
-    "name": "Work",
-    "link": "#work",
+    "name": "Experience",
+    "link": "#experience",
     "type": "navigation"
   },
   {
