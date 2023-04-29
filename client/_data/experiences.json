@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Fundementals of Web Development",
+    "institute": "HackerYou",
+    "description": "placeholder description",
+    "year": "2017",
+    "type": "education"
+  },
+  {
+    "title": "Fundementals of Javascript",
+    "institute": "HackerYou",
+    "description": "placeholder description",
+    "year": "2018",
+    "type": "education"
+  },
+  {
+    "title": "Web Developer",
+    "institute": "Klick Health",
+    "description": "placeholder description",
+    "year": "2019",
+    "type": "professional"
+  },
+  {
+    "title": "Intro to Web Accessibility",
+    "institute": "Chang School",
+    "description": "placeholder description",
+    "year": "2019",
+    "type": "education"
+  },
+  {
+    "title": "CS50: Intro to Computer Science",
+    "institute": "edX",
+    "description": "placeholder description",
+    "year": "2020",
+    "type": "education"
+  },
+  {
+    "title": "Senior Web Developer",
+    "institute": "Klick Health",
+    "description": "placeholder description",
+    "year": "2021",
+    "type": "professional"
+  },
+  {
+    "title": "Software Developer",
+    "institute": "ShelterMovers",
+    "description": "placeholder description",
+    "year": "2021",
+    "type": "volunteer"
+  },
+  {
+    "title": "Senior Software Developer",
+    "institute": "HelloFresh",
+    "description": "placeholder description",
+    "year": "2022",
+    "type": "professional"
+  }
+]

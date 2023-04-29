@@ -1,0 +1,24 @@
+{% assign firstYear = experiences | map: 'year' | first %}
+
+<div class="timeline__containter">
+  <div class="timeline__selector">
+    {% assign years = experiences | map: 'year' | uniq %}
+    {% for year in years %}
+      <button class="timeline__button" data-timeline-selector="{{year}}">{{ year }}</button>
+    {% endfor %}
+  </div>
+  <div class="timeline__experience__container">
+    {% for experience in experiences %}
+      {% if experience.year == firstYear %}
+        <div class="timeline__experience timeline__experience__visible" data-timeline-year="{{experience.year}}">
+      {% else %}
+        <div class="timeline__experience" data-timeline-year="{{experience.year}}">
+      {% endif %}
+          <h3>{{ experience.title }}</h3>
+          <p>{{ experience.institute }}</p>
+          <p>{{ experience.type | titlecase }}</p>
+          <p>{{ experience.description }}</p>
+        </div>
+    {% endfor %}
+  </div>
+</div>
