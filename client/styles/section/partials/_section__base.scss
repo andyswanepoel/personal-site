@@ -2,11 +2,11 @@
 
 .section {
   position: relative;
-  padding: 24px 48px;
+  padding: 24px var(--section-padding-x-desktop);
   max-width: 1440px;
   margin: 0 auto;
   @include mobile {
-    padding: 16px;
+    padding: var(--section-padding-mobile);
   }
 }
 

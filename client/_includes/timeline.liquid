@@ -2,14 +2,26 @@
 
 <div class="timeline__containter">
   <div class="timeline__selector">
-    {% assign years = experiences | map: 'year' | uniq %}
-    {% for year in years %}
-      <button class="timeline__button" data-timeline-selector="{{year}}">{{ year }}</button>
-    {% endfor %}
+    <div class="timeline__overflow">
+      <div id="timeline__window" class="timeline__window">
+      {% assign years = experiences | map: 'year' | uniq %}
+      {% for year in years %}
+        {%- if forloop.index == 1 -%}
+          <div class="timeline__button__container">
+            <button class="timeline__button timeline__button__selected" data-timeline-selector="{{year}}">{{ year }}</button>
+          </div>
+        {% else %}
+          <div class="timeline__button__container">
+            <button class="timeline__button" data-timeline-selector="{{year}}">{{ year }}</button>
+          </div>
+        {% endif %}
+      {% endfor %}
+      </div>
+    </div>
   </div>
   <div class="timeline__experience__container">
     {% for experience in experiences %}
-      {% if experience.year == firstYear %}
+      {%- if forloop.index == 1 -%}
         <div class="timeline__experience timeline__experience__visible" data-timeline-year="{{experience.year}}">
       {% else %}
         <div class="timeline__experience" data-timeline-year="{{experience.year}}">
