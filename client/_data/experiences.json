@@ -18,7 +18,7 @@
     "institute": "Klick Health",
     "description": "placeholder description",
     "year": "2019",
-    "type": "professional"
+    "type": "work"
   },
   {
     "title": "Intro to Web Accessibility",
@@ -39,7 +39,7 @@
     "institute": "Klick Health",
     "description": "placeholder description",
     "year": "2021",
-    "type": "professional"
+    "type": "work"
   },
   {
     "title": "Software Developer",
@@ -53,6 +53,6 @@
     "institute": "HelloFresh",
     "description": "placeholder description",
     "year": "2022",
-    "type": "professional"
+    "type": "work"
   }
 ]

@@ -1,22 +1,42 @@
-const changeYear = (event: Event) => {
+const scrollToContent = (event: Event) => {
   const target = event.currentTarget as HTMLElement;
   const year = target.getAttribute("data-timeline-selector");
 
-  document.querySelectorAll("[data-timeline-year]").forEach(exp => {
-    exp.classList.remove("timeline__experience__visible");
-    if (exp.getAttribute("data-timeline-year") === year) {
-      exp.classList.add("timeline__experience__visible");
-    }
-  });
+  document
+    .querySelector(`[data-timeline-year='${year}']`)
+    ?.scrollIntoView({ behavior: "smooth" });
+};
 
-  document.querySelectorAll("[data-timeline-selector]").forEach(btn => {
-    btn.classList.remove("timeline__button__selected");
-    if (btn === target) {
-      btn.classList.add("timeline__button__selected");
-    }
-  });
+const changeTimelineYear = (year: string) => {
+  document
+    .querySelectorAll("[data-timeline-selector]")
+    .forEach(btn => btn.classList.remove("timeline__button__selected"));
+
+  document
+    .querySelector(`[data-timeline-selector='${year}']`)
+    ?.classList.add("timeline__button__selected");
 
   scrollToSelectedYear();
+};
+
+let scrollToYearTimeout;
+
+const changeYearScroll = (entry: IntersectionObserverEntry) => {
+  if (scrollToYearTimeout) {
+    clearTimeout(scrollToYearTimeout);
+  }
+
+  if (entry.isIntersecting) {
+    console.log("entry: ", entry);
+    const year = entry.target.getAttribute("data-timeline-year");
+
+    scrollToYearTimeout = setTimeout(() => {
+      if (year) {
+        console.log("@@@@fitring");
+        changeTimelineYear(year);
+      }
+    }, 50);
+  }
 };
 
 const scrollToSelectedYear = () => {
@@ -34,9 +54,24 @@ const scrollToSelectedYear = () => {
   scrollWindow.style.transform = `translateX(calc(50% - ${scrollTo}px))`;
 };
 
+const timelineObserverOptions = {
+  root: document.getElementById("timeline__experience__container"),
+  rootMargin: "0px",
+  threshold: 0.9
+};
+
+const callback = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach(changeYearScroll);
+};
+
+let observer = new IntersectionObserver(callback, timelineObserverOptions);
+
 export default () => {
-  scrollToSelectedYear();
   document.querySelectorAll("[data-timeline-selector]").forEach(btn => {
-    btn.addEventListener("click", changeYear);
+    btn.addEventListener("click", scrollToContent);
   });
+
+  document
+    .querySelectorAll(".timeline__experience__wrapper")
+    .forEach(w => observer.observe(w));
 };
