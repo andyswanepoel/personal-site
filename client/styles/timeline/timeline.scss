@@ -10,15 +10,25 @@
     opacity: 1;
   }
 }
+.timeline__containter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  @include mobile {
+    display: block;
+  }
+}
 
 .timeline__year__container {
   display: flex;
+  width: calc(50% - 12px / 2);
   opacity: 0;
   flex-direction: row;
   align-items: flex-start;
   margin-top: 48px;
   position: relative;
   @include mobile {
+    width: 100%;
     margin-top: 0px;
     flex-direction: column;
   }
@@ -31,7 +41,7 @@
 .timeline__year__title {
   position: relative;
   width: fit-content;
-  margin-right: 80px;
+  margin-right: 50px;
   margin-top: 0;
   font-size: 24px;
   @include mobile {

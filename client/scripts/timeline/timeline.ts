@@ -7,7 +7,7 @@ const addVisibleClass = (entry: IntersectionObserverEntry) => {
 
 const timelineObserverOptions = {
   root: document.getElementById("timeline__experience__container"),
-  rootMargin: "-100px",
+  rootMargin: "-50px",
   threshold: 0
 };
 
