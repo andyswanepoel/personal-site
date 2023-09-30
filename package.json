@@ -5,7 +5,7 @@
   "main": "server/app.ts",
   "scripts": {
     "clean": "rm -rf ./client/dist",
-    "start:dev": "concurrently \"npm:build:*:dev\"",
+    "start": "concurrently \"npm:build:*:dev\"",
     "build:css:dev": "sass client/styles:client/dist/styles --watch",
     "build:js:dev": "esbuild client/scripts/index.ts --bundle --sourcemap --watch --target=chrome58,firefox57,safari11,edge16 --outfile=client/dist/index.js",
     "build:html:dev": "eleventy --serve --watch",
