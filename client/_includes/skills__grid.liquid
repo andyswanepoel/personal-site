@@ -33,29 +33,3 @@
     </li>
   {%- endfor -%}
 </ul>
-
-{% comment %} 
-
-<div class="grid__skill__card__container">
-{%- for skill in skills -%}
-<div
-class="grid__skill__card"
-data-skill-card="{{skill.title}}"
-">
-<p class="grid__skill__card__title grid__skill__text">{{ skill.display }}</p>
-<div class="grid__skill__level__container">
-<img
-class="img img__grid__skill__level"
-src="img/skills/{{skill.level}}.png"
-alt="">
-<div class="grid__skill__level__text__container">
-<p class="grid__skill__text">Proficiency</p>
-<p class="grid__skill__text">{{ skill.level | titlecase }}</p>
-</div>
-</div>
-<p class="grid__skill__text">Experience</p>
-<p class="grid__skill__text">{{ skill.experience }}</p>
-</div>
-{%- endfor -%}
-</div>
-{% endcomment %}

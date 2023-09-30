@@ -1,148 +1,73 @@
-.timeline__containter {
-}
-.timeline__selector {
-  margin: 0 calc(var(--section-padding-x-desktop) * -1);
-  padding: 0 var(--section-padding-x-desktop);
-  height: 100px;
-  background-color: var(--black);
-  position: relative;
-  &:after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid var(--black);
+@import "../global/mixins";
+
+@keyframes fadeIn {
+  0% {
+    top: -10px;
+    opacity: 0;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    top: calc(50% + 22px);
-    transform: translateY(-50%);
-    left: 0;
-    background-color: var(--white);
-    width: 100%;
-    height: 2px;
+  100% {
+    top: 0px;
+    opacity: 1;
   }
 }
 
-.timeline__overflow {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+.timeline__year__container {
   display: flex;
-  align-items: center;
-}
-.timeline__window {
-  position: relative;
-  top: -10px;
-  display: flex;
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-.timeline__button__container {
-  margin: 0 40px;
-  position: relative;
-  &:first-child {
-    margin-left: 0;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    border: 2px solid var(--white);
-    background-color: var(--black);
-    left: 50%;
-    bottom: -12px;
-    transform: translate(-50%, 100%);
-  }
-}
-.timeline__button {
-  position: relative;
-  color: var(--white);
-  font-family: inherit;
-  font-size: 24px;
-  padding: 0;
-  margin: 0;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: scale 0.5s ease-in-out;
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
-.timeline__button__selected {
-  scale: 1.7;
-}
-.timeline__experience__container {
-  display: flex;
+  opacity: 0;
   flex-direction: row;
-  overflow: scroll;
-  scroll-snap-type: x mandatory;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
+  align-items: flex-start;
+  margin-top: 48px;
+  position: relative;
+  @include mobile {
+    margin-top: 0px;
+    flex-direction: column;
   }
 }
 
-.timeline__experience__wrapper {
-  scroll-snap-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  width: 100%;
-  justify-content: center;
-  margin-top: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 24px;
+.timeline__year__container__visible {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.timeline__year__title {
+  position: relative;
+  width: fit-content;
+  margin-right: 80px;
+  margin-top: 0;
+  font-size: 24px;
+  @include mobile {
+    margin: 28px 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + 12px);
+    background-color: var(--black);
+    bottom: -5px;
+    left: 0;
+  }
 }
 
 .timeline__experience {
   display: block;
-  color: var(--white);
+  color: var(--black);
   opacity: 1;
-  margin-top: 28px;
-  padding: 44px 32px 18px;
+
   position: relative;
   height: auto;
-  width: 330px;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-color: var(--secondary-color);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
-  &.timeline__experience__visible {
-    display: block;
+  &:not(:first-of-type) {
+    margin-top: 28px;
   }
 }
 
 .timeline__experience__title {
+  font-size: 20px;
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 .timeline__experience__institute {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
 }
 
@@ -159,11 +84,6 @@
   box-shadow: 4px 4px 8px rgba(46, 65, 81, 0.25);
   &:before {
     margin-right: 8px;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
   }
 }
 

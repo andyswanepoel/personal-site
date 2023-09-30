@@ -2,37 +2,25 @@
 {% assign years = experiences | map: 'year' | uniq %}
 
 <div class="timeline__containter">
-  <div class="timeline__selector">
-    <div class="timeline__overflow">
-      <div id="timeline__window" class="timeline__window">
-        {% for year in years %}
-          {%- if forloop.index == 1 -%}
-            <div class="timeline__button__container">
-              <button class="timeline__button timeline__button__selected" data-timeline-selector="{{year}}">{{ year }}</button>
+  {% for year in years %}
+    <div
+      class="timeline__year__container {%if year == firstYear %} timeline__year__container__visible{% endif %}"
+      data-timeline-year>
+      <h3 class="timeline__year__title">{{ year }}</h3>
+      <div class="timeline__experience__container">
+        <div class="timeline__experience__wrapper">
+          {% assign current_experiences = experiences | where: "year", year %}
+          {% for experience in current_experiences %}
+            <div class="timeline__experience">
+              <p class="timeline__experience__type timeline__experience__{{experience.type}}">{{ experience.type | titlecase }}</p>
+              <h4 class="timeline__experience__title">{{ experience.title }}</h4>
+              <p class="timeline__experience__institute">{{ experience.institute }}</p>
+              <p class="timeline__experience__description">{{ experience.description }}</p>
             </div>
-          {% else %}
-            <div class="timeline__button__container">
-              <button class="timeline__button" data-timeline-selector="{{year}}">{{ year }}</button>
-            </div>
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-  <div id="timeline__experience__container" class="timeline__experience__container">
-    {% for year in years %}
-      <div class="timeline__experience__wrapper" data-timeline-year="{{year}}">
-        {% assign current_experiences = experiences | where: "year", year %}
-        {% for experience in current_experiences %}
-          <div class="timeline__experience">
-            <p>{{ experience.year }}</p>
-            <p class="timeline__experience__type timeline__experience__{{experience.type}}">{{ experience.type | titlecase }}</p>
-            <h3 class="timeline__experience__title">{{ experience.title }}</h3>
-            <p class="timeline__experience__institute">{{ experience.institute }}</p>
-            <p class="timeline__experience__description">{{ experience.description }}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
+  {% endfor %}
+
 </div>
