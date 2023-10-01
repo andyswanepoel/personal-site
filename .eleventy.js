@@ -26,7 +26,7 @@ const readFiles = (dirPath = "") => {
           rel="preload" 
           href="${cssDirectory}${dirPath}/${file.replace(".scss", ".css")}" 
           as="style"
-          onload="this.rel='stylesheet';this.removeAttribute('as');this.removeAttribute('onload');">
+          data-defer-styles>
         <noscript>
           <link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
         ".scss",
