@@ -1,3 +1,5 @@
+@import "../global/mixins";
+
 .section__about {
   padding-left: 456px;
   @include tablet {

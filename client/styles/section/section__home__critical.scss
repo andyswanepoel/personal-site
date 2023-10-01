@@ -1,4 +1,4 @@
-@import "../../global/mixins";
+@import "../global/mixins";
 
 .section__home {
   position: relative;
@@ -85,6 +85,11 @@
   }
 }
 
+.img__main__container {
+  @include mobile {
+    order: -1;
+  }
+}
 .img__main {
   width: 500px;
   @include tablet {

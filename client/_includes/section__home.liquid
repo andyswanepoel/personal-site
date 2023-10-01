@@ -1,6 +1,7 @@
 <section id="home" class="section section__home">
   <div class="terminal">
-    <div class="terminal__buttons"></div>
+    <div
+      class="terminal__buttons"></div>
     <div class="terminal__inner">
       <div class="terminal__text__container">
         <p class="terminal__text terminal__text__command" aria-hidden="true">
@@ -18,8 +19,27 @@
       </div>
     </div>
   </div>
-  <img
-    class="img img__main"
-    src="img/andy-juggling.png"
-    alt="Andy juggling Typescript, React, and Jest logos.">
+  <picture class="img__main__container">
+    <source
+      media="(min-width: 1025px)"
+      srcset="img/andy-juggling-full.webp"
+      type="image/webp">
+    <source
+      media="(min-width: 1025px)"
+      srcset="img/andy-juggling-full.png"
+      type="image/png">
+    <source
+      media="(max-width: 1024px)"
+      srcset="img/andy-juggling-1024.webp"
+      type="image/webp">
+    <source
+      media="(max-width: 1024px)"
+      srcset="img/andy-juggling-1024.png"
+      type="image/png">
+    <img
+      class="img img__main"
+      src="img/andy-juggling-full.png"
+      alt="Andy juggling Typescript, React, and Jest logos.">
+  </picture>
+
 </section>

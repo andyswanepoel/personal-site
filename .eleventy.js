@@ -8,16 +8,35 @@ const readFiles = (dirPath = "") => {
   return fs
     .readdirSync(`${baseDirectory}/${dirPath}`)
     .map(file => {
-      if (!fs.statSync(`${baseDirectory}/${dirPath}/${file}`).isDirectory()) {
-        if (file[0] !== "_") {
-          return `<link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
-            ".scss",
-            ".css"
-          )}">`;
-        }
-      } else {
+      if (fs.statSync(`${baseDirectory}/${dirPath}/${file}`).isDirectory()) {
         return readFiles(`${dirPath ? dirPath + "/" + file : "/" + file}`);
       }
+      if (file[0] === "_") {
+        return;
+      }
+      if (file.includes("__critical")) {
+        console.log("@@@@critical; ", file);
+        return `<link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
+          ".scss",
+          ".css"
+        )}">`;
+      }
+
+      return `
+        <link 
+          rel="preload" 
+          href="${cssDirectory}${dirPath}/${file.replace(".scss", ".css")}" 
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
+        ".scss",
+        ".css"
+      )}">
+        </noscript>
+
+      
+      `;
     })
     .join("\n");
 };
