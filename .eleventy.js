@@ -15,7 +15,6 @@ const readFiles = (dirPath = "") => {
         return;
       }
       if (file.includes("__critical")) {
-        console.log("@@@@critical; ", file);
         return `<link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
           ".scss",
           ".css"
@@ -27,7 +26,7 @@ const readFiles = (dirPath = "") => {
           rel="preload" 
           href="${cssDirectory}${dirPath}/${file.replace(".scss", ".css")}" 
           as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
+          onload="this.rel='stylesheet';this.removeAttribute('as');this.removeAttribute('onload');">
         <noscript>
           <link rel="stylesheet" href="${cssDirectory}${dirPath}/${file.replace(
         ".scss",
