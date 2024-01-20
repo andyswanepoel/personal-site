@@ -7,13 +7,13 @@
   },
   {
     "title": "typescript",
-    "display": "Typescript",
+    "display": "TypeScript",
     "level": "intermediate",
     "experience": "2+ years"
   },
   {
     "title": "javascript",
-    "display": "Javascript",
+    "display": "JavaScript",
     "level": "advanced",
     "experience": "5+ years"
   },
@@ -25,7 +25,7 @@
   },
   {
     "title": "nextjs",
-    "display": "Next.JS",
+    "display": "Next.js",
     "level": "intermediate",
     "experience": "2+ years"
   },

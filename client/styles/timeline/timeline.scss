@@ -73,12 +73,18 @@
 .timeline__experience__title {
   font-size: 20px;
   margin-top: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .timeline__experience__institute {
   margin-top: 0;
-  font-size: 18px;
+  margin-bottom: 8px;
+  font-size: 16px;
   font-style: italic;
+}
+
+.timeline__experience__description {
+  margin-top: 0;
+  font-size: 18px;
 }
 
 .timeline__experience__type {

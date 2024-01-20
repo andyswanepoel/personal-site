@@ -13,18 +13,18 @@ I didn't need anything fancy, so I opted for [Eleventy](11ty.dev) as it seemed t
 
 For styling, I'm going back to my roots and write my own CSS (well, technically SASS, but still!).
 
-There really shouldnt be a lot of interactivity on the site, but I've set up a build pipeline for Typescript files.
+There really shouldn't be a lot of interactivity on the site, but I've set up a build pipeline for Typescript files.
 
 ## Starting the project
 
 ```js
-$ ~ yarn
-$ ~ yarn start:dev
+$ ~ npm install
+$ ~ npm start:dev
 ```
 
 ## Buil the project
 
 ```js
-$ ~ yarn
-$ ~ yarn build:prod
+$ ~ npm
+$ ~ npm build:prod
 ```

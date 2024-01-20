@@ -1,58 +1,72 @@
 [
   {
     "title": "Fundementals of Web Development",
-    "institute": "HackerYou",
-    "description": "placeholder description",
+    "institute": "Juno College (HackerYou)",
+    "description": "HTML, CSS, responsive design, and basic frontend development.",
     "year": "2017",
     "type": "education"
   },
   {
-    "title": "Fundementals of Javascript",
-    "institute": "HackerYou",
-    "description": "placeholder description",
+    "title": "Fundementals of JavaScript",
+    "institute": "Juno College (HackerYou)",
+    "description": "Fundamentals including functions, control flow, event handling, DOM manipulation, closure, and asynchronous programming.",
     "year": "2018",
     "type": "education"
   },
   {
     "title": "Web Developer",
     "institute": "Klick Health",
-    "description": "placeholder description",
+    "description": "Developed cross-browser responsive websites, internal tools, banners, and emails.",
     "year": "2019",
     "type": "work"
   },
   {
     "title": "Intro to Web Accessibility",
     "institute": "Chang School",
-    "description": "placeholder description",
+    "description": "WCAG guidelines, assistive technologies, accessibility best practices, and accessibility testing tools.",
     "year": "2019",
     "type": "education"
   },
   {
     "title": "CS50: Intro to Computer Science",
     "institute": "edX",
-    "description": "placeholder description",
+    "description": "Explored algorithmic thinking, abstraction, data structures, and software engineering. Applied skills to real-world problem sets in biology, cryptography, and finance.",
     "year": "2020",
     "type": "education"
   },
   {
     "title": "Senior Web Developer",
     "institute": "Klick Health",
-    "description": "placeholder description",
+    "description": "Ownership of fullstack and frontend projects. Evaluate and assess modern technologies. Review project scopes, mentor developers, and conduct code reviews.",
     "year": "2021",
     "type": "work"
   },
   {
     "title": "Software Developer",
     "institute": "ShelterMovers",
-    "description": "placeholder description",
-    "year": "2021",
+    "description": "Led development of a React app helping to organize movers and moves. The app was started by UofT students, but needed volunteers to get things up and running again.",
+    "year": "2022",
     "type": "volunteer"
   },
   {
     "title": "Senior Software Developer",
     "institute": "HelloFresh",
-    "description": "placeholder description",
+    "description": "Drive customer growth through experimentation. Led cross-functional projects, addressed tech debt, mentored peers, and managed on-call responsibilities.",
     "year": "2022",
     "type": "work"
+  },
+  {
+    "title": "Fullstack to Backend",
+    "institute": "Frontend Master",
+    "description": "Set up servers, create APIs, and deployed code to the world by learning the full stack, including databases, containers, and a bit of DevOps and AWS.",
+    "year": "2023",
+    "type": "education"
+  },
+  {
+    "title": "AWS Certified Developer Associate",
+    "institute": "Udemy",
+    "description": "Hands-on experience and knowledge of the services covered in the AWS Certified Developer Associate exam.",
+    "year": "2023",
+    "type": "education"
   }
 ]
