@@ -9,7 +9,7 @@ I created designs myself on Figma and while it was a lot of fun to learn, I woul
 
 ## How it's built
 
-I didn't need anything fancy, so I opted for [Eleventy](11ty.dev) as it seemed to be a pretty straight forward static site generator to get up and running.
+I didn't need anything fancy, so I opted for [Eleventy](https://www.11ty.dev) as it seemed to be a pretty straight forward static site generator to get up and running.
 
 For styling, I'm going back to my roots and write my own CSS (well, technically SASS, but still!).
 
