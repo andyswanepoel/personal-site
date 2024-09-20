@@ -1,0 +1,24 @@
+---
+layout: base.liquid
+title: creedthoughts
+---
+<h1 class="visually-hidden">My Thoughts</h1>
+<section class="section">
+    {% for post in posts %}
+    <h2 class="headline__section">{{post.title}}</h2>
+
+    <div class="wrapper__blog_list_item">
+
+        <img
+        class="img__thumbnail"
+        src="/img/{{post.thumbnail}}"
+        alt=""
+        loading="lazy">
+        <div class="wrapper__blog_list_item_detail">
+            <p>{{post.description}}</p>
+            <a href="/blog/{{post.slug}}">Full story</a>
+        </div>
+    </div>
+
+{% endfor %}
+</section>
