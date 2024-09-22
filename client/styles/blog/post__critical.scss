@@ -1,0 +1,22 @@
+@import "../global/mixins";
+
+.wrapper__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.figure__post {
+  width: 100%;
+  max-width: 400px;
+  &.figure__post__landscape {
+    max-width: 700px;
+  }
+  figcaption {
+    margin-top: 6px;
+    font-size: 18px;
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
