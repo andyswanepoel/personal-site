@@ -1,6 +1,8 @@
 .wrapper__blog_list_item {
   display: flex;
   align-items: center;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .wrapper__blog_list_item_detail {
@@ -10,4 +12,8 @@
   display: block;
   width: 150px;
   height: 150px;
+}
+
+.link {
+  color: var(--secondary-color);
 }

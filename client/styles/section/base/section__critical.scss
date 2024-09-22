@@ -1,13 +1,16 @@
 @import "../../global/mixins";
 
-.section {
-  position: relative;
+.wrapper {
   padding: 24px var(--section-padding-x-desktop);
   max-width: 1440px;
   margin: 0 auto;
   @include mobile {
     padding: var(--section-padding-mobile);
   }
+}
+
+.section {
+  position: relative;
 }
 
 .headline__section {

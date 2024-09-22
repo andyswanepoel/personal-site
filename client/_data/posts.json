@@ -1,8 +1,14 @@
 [
   {
-    "title": "South Africa, bru!",
-    "description": "Blah, blah, blah!",
-    "thumbnail": "south-africa.png",
-    "slug": "2024-south-africa"
+    "title": "A layover in London",
+    "description": "On our way to South Africa, we stopped over in London to spend a few days seeing friends and exploring the city.",
+    "thumbnail": "london.png",
+    "slug": "2024-london-england"
+  },
+  {
+    "title": "South Africa, bru",
+    "description": "You really get a sense of how large Africa is when you fly over the entire thing. After 14 hours of flying, we finally arrived in the beautiful city of Cape Town.",
+    "thumbnail": "cape-town.png",
+    "slug": "2024-cape-town-south-africa"
   }
 ]

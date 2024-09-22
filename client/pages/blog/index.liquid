@@ -2,23 +2,22 @@
 layout: base.liquid
 title: creedthoughts
 ---
-<h1 class="visually-hidden">My Thoughts</h1>
-<section class="section">
-    {% for post in posts %}
-    <h2 class="headline__section">{{post.title}}</h2>
-
+<h1 class="visually-hidden">Andy Swanepoel's Blog</h1>
+{% for post in posts %}
+    
     <div class="wrapper__blog_list_item">
-
         <img
         class="img__thumbnail"
         src="/img/thumbnails/{{post.thumbnail}}"
         alt=""
-        loading="lazy">
+        loading="lazy"
+        height="150"
+        width="150">
         <div class="wrapper__blog_list_item_detail">
+            <h2 class="headline__section">{{post.title}}</h2>
             <p>{{post.description}}</p>
-            <a href="/blog/{{post.slug}}">Full story</a>
+            <a class="link" href="/blog/{{post.slug}}">Read more</a>
         </div>
     </div>
 
 {% endfor %}
-</section>
