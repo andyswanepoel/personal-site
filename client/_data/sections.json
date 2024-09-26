@@ -22,10 +22,5 @@
     "name": "Experience",
     "link": "#experience",
     "type": "navigation"
-  },
-  {
-    "name": "Blog",
-    "link": "#blog",
-    "type": "navigation"
   }
 ]
