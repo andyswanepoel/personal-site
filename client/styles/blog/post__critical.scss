@@ -12,11 +12,18 @@
   &.figure__post__landscape {
     max-width: 700px;
   }
+
   figcaption {
     margin-top: 6px;
     font-size: 18px;
     @include mobile {
       font-size: 16px;
     }
+  }
+
+  img,
+  video {
+    display: block;
+    width: 100%;
   }
 }

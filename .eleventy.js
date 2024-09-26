@@ -51,6 +51,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter("kebab", value => value.split(" ").join("-"));
 
   eleventyConfig.addPassthroughCopy({ "./client/img": "img" });
+  eleventyConfig.addPassthroughCopy({ "./client/videos": "videos" });
   eleventyConfig.addWatchTarget("./client/styles/");
   eleventyConfig.addWatchTarget("./client/scripts/");
   return {
