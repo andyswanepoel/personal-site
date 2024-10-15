@@ -16,6 +16,9 @@
   &.figure__post__landscape {
     max-width: 700px;
   }
+  &.figure__center {
+    align-self: center;
+  }
 
   figcaption {
     margin-top: 6px;
